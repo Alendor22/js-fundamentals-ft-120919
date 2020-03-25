@@ -117,5 +117,5 @@ function subtractTwoNums(num, num2) {
 }
 
 // console.log(doMath(1, 3, addTwoNums));
-console.log(doMath(3, 1, subtractTwoNums));
+// console.log(doMath(3, 1, subtractTwoNums));
 
