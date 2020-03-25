@@ -119,6 +119,64 @@ Object Datatypes:
 ### Return
 You must explicitly use `return` in a function unless it's an arrow funtion without a code block {}. If no `return` is given, the function will automatically give back `undefined`.
 
+### Conditionals
+Conditionals in Javascript are the same as Ruby with different syntax. In ruby we did:
+```
+ if 1 == 1
+  puts "1 is equal to 1"
+ elsif 1 == 2
+  puts "1 is equal to 2"
+ else
+  puts "1 is not equal to 1 and 1 is not equal to 2"
+ end
+```
+
+to re-write this in javascript, the conditions get wrapped in (), and have to specify our code blocks with {}
+
+```
+  if(1 == 1) {
+    console.log("1 is equal to 1");
+  }
+  else if(1 == 2) {
+    console.log("1 is equal to 2");
+  } else {
+    console.log("1 is not equal to 1 and 1 is not equal to 2");
+  }
+```
+
+ternaries are exact syntax as ruby:
+```
+1 == 1 ? "1 is equal to 1" : "1 is not equal to 1";
+```
+
+case statements in ruby are known as switch statements in Javascript, in ruby we did:
+```
+  input = gets.strip
+
+  case input:
+    when "1":
+      puts "user typed in '1'"
+    else
+      puts "user did not type in '1'"
+    end
+```
+
+in Javascript, the syntax follows:
+```
+  let num = 1
+
+  switch(num) {
+    case 1:
+      console.log('the num is 1');
+      break;
+    default:
+      console.log('the num is not 1');
+      break;
+  }
+```
+
+Notice here that I am using break to break out of the switch statements. Without break it would run the logic of every case statement, break will break out of it. If you use return, you don't have to use break.
+
 ### Destructive vs Non Destructive
 
 Descructive in javascript means to change the value of. For example in ruby a lot of times when we wanted something to be destructive, we'd use `!` at the end of the method call. For example:
